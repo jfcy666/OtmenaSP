@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+       <title>Создание судебного приказа</title>
+       <script>
+        function updateCities() {
+            const regionSelect = document.getElementById('region');
+            const citySelect = document.getElementById('city');
+            const selectedRegion = regionSelect.value;
+
+            // Очистка предыдущих городов
+            citySelect.innerHTML = '';
+
+            // Список городов по регионам
+            const cities = {
+                'Алтайский край': ['Барнаул', 'Новоалтайск', 'Рубцовск'],
+                'Амурская область': ['Благовещенск', 'Белогорск', 'Свободный'],
+                'Санкт-Петербург': ['Санкт-Петербург', 'Пушкин', 'Колпино'],
+                'Московская область': ['Красногорск', 'Лобня', 'Подольск'],
+                'Свердловская область': ['Екатеринбург', 'Нижний Тагил', 'Серов'],
+                'Калужская область': ['Калуга', 'Обнинск', 'Боровск'],
+                'Татарстан': ['Казань', 'Набережные Челны', 'Нижнекамск']
+            };
+
+            if (selectedRegion) {
+                cities[selectedRegion].forEach(function(city) {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+   </head>
+   <body>
+       <h1 class="red">Форма для создания судебного приказа</h1>
+       <form method="post">
+            <label for="region">Выберите регион:</label><br>
+            <select name="region" id="region" onchange="updateCities()" required>
+                <option value="">-- Выберите регион --</option>
+                <option value="Алтайский край">Алтайский край</option>
+                <option value="Амурская область">Амурская область</option>
+                <option value="Архангельская область">Архангельская область</option>
+                <option value="Астраханская область">Астраханская область</option>
+
+                <option value="Белгородская область">Белгородская область</option>
+                <option value="Брянская область">Брянская область</option>
+
+                <option value="Владимирская область">Владимирская область</option>
+                <option value="Волгоградская область">Волгоградская область</option>
+                <option value="Вологодская область">Вологодская область</option>
+                <option value="Воронежская область">Воронежская область</option>
+
+                <option value="Донецкая Народная Республика">Донецкая Народная Республика</option>
+
+                <option value="Еврейская автономная область">Еврейская автономная область</option>
+
+                <option value="Забайкальский край">Забайкальский край</option>
+                <option value="Запорожская область">Запорожская область</option>
+
+                <option value="Ивановская область">Ивановская область</option>
+                <option value="Иркутская область">Иркутская область</option>
+
+                <option value="Кабардино-Балкарская Республика">Кабардино-Балкарская Республика</option>
+                <option value="Калининградская область">Калининградская область</option>
+                <option value="Калужская область">Калужская область</option>
+                <option value="Камчатский край">Камчатский край</option>
+                <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
+                <option value="Кемеровская область - Кузбасс">Кемеровская область - Кузбасс</option>
+                <option value="Кировская область">Кировская область</option>
+                <option value="Костромская область">Костромская область</option>
+                <option value="Краснодарский край">Краснодарский край</option>
+                <option value="Красноярский край">Красноярский край</option>
+                <option value="Курганская область">Курганская область</option>
+                <option value="Курская область">Курская область</option>
+
+                <option value="Ленинградская область">Ленинградская область</option>
+                <option value="Липецкая область">Липецкая область</option>
+                <option value="Луганская Народная Республика">Луганская Народная Республика</option>
+            
+                <option value="Магаданская область">Магаданская область</option>
+                <option value="Москва">Москва</option>
+                <option value="Московская область">Московская область</option>
+                <option value="Мурманская область">Мурманская область</option>
+
+                <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
+                <option value="Нижегородская область">Нижегородская область</option>
+                <option value="Новгородская область">Новгородская область</option>
+                <option value="Новосибирская область">Новосибирская область</option>
+
+                <option value="Омская область">Омская область</option>
+                <option value="Оренбургская область">Оренбургская область</option>
+                <option value="Орловская область">Орловская область</option>
+
+                <option value="Пензенская область">Пензенская область</option>
+                <option value="Пермский край">Пермский край</option>
+                <option value="Приморский край">Приморский край</option>
+                <option value="Псковская область">Псковская область</option>
+
+                <option value="Республика Адыгея">Республика Адыгея</option>
+                <option value="Республика Алтай">Республика Алтай</option>
+                <option value="Республика Башкортостан">Республика Башкортостан</option>
+                <option value="Республика Бурятия">Республика Бурятия</option>
+
+                <option value="Республика Дагестан">Республика Дагестан</option>
+                <option value="Республика Ингушетия">Республика Ингушетия</option>
+                <option value="Республика Калмыкия">Республика Калмыкия</option>
+                <option value="Республика Карелия">Республика Карелия</option>
+
+                <option value="Республика Коми">Республика Коми</option>
+                <option value="Республика Крым">Республика Крым</option>
+                <option value="Республика Марий Эл">Республика Марий Эл</option>
+                <option value="Республика Мордовия">Республика Мордовия</option>
+
+                <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                <option value="Республика Северная Осетия - Алания">Республика Северная Осетия - Алания</option>
+                <option value="Республика Татарстан">Республика Татарстан</option>
+                <option value="Республика Тыва">Республика Тыва</option>
+
+                <option value="Республика Хакасия">Республика Хакасия</option>
+                <option value="Ростовская область">Ростовская область</option>
+                <option value="Рязанская область">Рязанская область</option>
+
+                <option value="Самарская область">Самарская область</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Саратовская область">Саратовская область</option>
+                <option value="Сахалинская область">Сахалинская область</option>
+                <option value="Свердловская область">Свердловская область</option>
+                <option value="Севастополь">Севастополь</option>
+                <option value="Смоленская область">Смоленская область</option>
+                <option value="Ставропольский край">Ставропольский край</option>
+
+                <option value="Тамбовская область">Тамбовская область</option>
+                <option value="Тверская область">Тверская область</option>
+                <option value="Томская область">Томская область</option>
+                <option value="Тульская область">Тульская область</option>
+                <option value="Тюменская область">Тюменская область</option>
+
+                <option value="Удмуртская республика">Удмуртская республика</option>
+                <option value="Ульяновская область">Ульяновская область</option>
+
+                <option value="Хабаровский край">Хабаровский край</option>
+                <option value="Ханты-Мансийский автономный округ — Югра">Ханты-Мансийский автономный округ — Югра</option>
+                <option value="Херсонская область">Херсонская область</option>
+
+                <option value="Челябинская область">Челябинская область</option>
+                <option value="Чеченская Республика">Чеченская Республика</option>
+                <option value="Чувашская Республика">Чувашская Республика</option>
+                <option value="Чукотский автономный округ">Чукотский автономный округ</option>
+
+                <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
+                <option value="Ярославская область">Ярославская область</option>
+            </select><br>
+    
+            <label for="city">Выберите город:</label><br>
+            <select name="city" id="city" required disabled>
+                <option value="">-- Сначала выберите регион --</option>
+            </select><br>
+
+            <label>ФИО судьи в дательном падеже</label><br>
+            <input type="text" id="sudyamne" name="sudyamne" required><br>
+
+            <label>Номер судебного участка:</label><br>
+            <input type="text" name="suduchastok" required><br>
+
+           <label>Номер судебного приказа:</label><br>
+           <input type="text" name="sudebprikaz" required><br>
+
+           <label>Дата судебного приказа:</label><br>
+           <input type="date" name="datasudebprikaz" required><br>
+
+           <label>Сумма долга:</label><br>
+           <input type="text" name="money" required><br>
+
+           <label>Взыскатель:</label><br>
+           <input type="text" name="vodnik" required><br>
+
+           <label>Телефон должника:</label><br>
+           <input type="text" name="phone" required><br>
+
+           <label>ФИО должника:</label><br>
+           <input type="text" name="FIOMINI" required><br>
+
+           <label>Почта должника:</label><br>
+           <input type="email" name="mail" required><br>
+
+           <label>Адрес должника:</label><br>
+           <input type="text" name="adress" required><br>
+
+           <label>Пол должника:</label><br>
+           <select name="choiceSEX" required>
+               <option value="1">Мужской</option>
+               <option value="2">Женский</option>
+           </select><br>
+
+           <input type="submit" value="Создать документ">
+       </form>
+       <script>
+        // Активируем выбор города только после выбора региона
+        document.getElementById('region').addEventListener('change', function() {
+            const citySelect = document.getElementById('city');
+            if (this.value) {
+                citySelect.disabled = false; // Разблокируем выбор города
+            } else {
+                citySelect.disabled = true; // Блокируем выбор города
+                citySelect.innerHTML = '<option value="">-- Сначала выберите регион --</option>'; // Очищаем города
+            }
+        });
+    </script>
+   </body>
+   </html>
